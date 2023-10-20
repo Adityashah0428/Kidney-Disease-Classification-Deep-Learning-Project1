@@ -2,3 +2,45 @@
 [2023-10-19 23:25:54,889: INFO: main: welcometo our custom log]
 [2023-10-19 23:26:00,358: INFO: main: welcome to our custom log]
 [2023-10-20 22:49:44,351: INFO: main: welcome to our custom log]
+[2023-10-21 02:08:33,706: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 02:08:33,709: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 02:08:33,711: INFO: common: created directory at: artifacts]
+[2023-10-21 02:08:33,714: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-21 02:08:33,717: INFO: 986331348: Downloading data from https://drive.google.com/file/d/1HkS6T9uEgz7KBa0ZD83fl9-_VmmQeIbo/view?usp=share_link into file artifacts/data_ingestion/data.zip]
+[2023-10-21 02:10:24,757: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/1HkS6T9uEgz7KBa0ZD83fl9-_VmmQeIbo/view?usp=share_link into file artifacts/data_ingestion/data.zip]
+[2023-10-21 02:34:33,057: INFO: main: >>>>>> stage Data INgestion Stage started <<<<<<]
+[2023-10-21 02:34:33,057: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 02:34:33,057: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 02:34:33,057: INFO: common: created directory at: artifacts]
+[2023-10-21 02:34:33,065: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-21 02:34:33,066: ERROR: main: name 'DataIngestion' is not defined]
+Traceback (most recent call last):
+  File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\main.py", line 10, in <module>
+    obj.main()
+  File "c:\kidney-disease-classification-deep-learning-project1\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion = DataIngestion(config=data_ingestion_config)
+                     ^^^^^^^^^^^^^
+NameError: name 'DataIngestion' is not defined
+[2023-10-21 02:35:14,307: INFO: main: >>>>>> stage Data INgestion Stage started <<<<<<]
+[2023-10-21 02:35:14,313: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 02:35:14,313: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 02:35:14,313: INFO: common: created directory at: artifacts]
+[2023-10-21 02:35:14,313: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-21 02:35:14,313: ERROR: main: cannot access local variable 'data_ingestion' where it is not associated with a value]
+Traceback (most recent call last):
+  File "c:\Kidney-Disease-Classification-Deep-Learning-Project1\main.py", line 10, in <module>
+    obj.main()
+  File "c:\kidney-disease-classification-deep-learning-project1\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion = data_ingestion(config=data_ingestion_config)
+                     ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'data_ingestion' where it is not associated with a value
+[2023-10-21 02:39:19,779: INFO: main: >>>>>> stage Data INgestion Stage started <<<<<<]
+[2023-10-21 02:39:19,779: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 02:39:19,784: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 02:39:19,785: INFO: common: created directory at: artifacts]
+[2023-10-21 02:39:19,785: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-21 02:39:19,786: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1HkS6T9uEgz7KBa0ZD83fl9-_VmmQeIbo/view?usp=share_link into file artifacts/data_ingestion/data.zip]
+[2023-10-21 02:45:15,862: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1HkS6T9uEgz7KBa0ZD83fl9-_VmmQeIbo/view?usp=share_link into file artifacts/data_ingestion/data.zip]
+[2023-10-21 02:45:18,284: INFO: main: >>>>>> stage Data INgestion Stage completed <<<<<<
+
+x==========x]
