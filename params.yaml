@@ -1,1 +1,8 @@
-key: val
+AUGMENTATION: True
+IMAGE_SIZE: [224,224,3] #AS PER VGG16 BASE MODEL
+BATCH_SIZE: 16
+INCLUDE_TOP: False #means do not include the top dense layer only include the convolutional layer
+EPOCHS: 1
+CLASSES: 2
+WEIGHTS: imagenet
+LEARNING_RATE: 0.01
