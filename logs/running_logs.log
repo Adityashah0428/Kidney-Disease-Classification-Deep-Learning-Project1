@@ -204,3 +204,168 @@ x==========x]
 [2023-10-21 22:42:31,710: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2023-10-21 23:00:00,358: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2023-10-21 23:00:00,358: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:00:00,358: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:00:00,358: INFO: common: created directory at: artifacts]
+[2023-10-21 23:00:00,358: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-21 23:00:00,371: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1HkS6T9uEgz7KBa0ZD83fl9-_VmmQeIbo/view?usp=share_link into file artifacts/data_ingestion/data.zip]
+[2023-10-21 23:03:51,461: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1HkS6T9uEgz7KBa0ZD83fl9-_VmmQeIbo/view?usp=share_link into file artifacts/data_ingestion/data.zip]
+[2023-10-21 23:03:53,875: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2023-10-21 23:04:20,556: INFO: stage_02_prepare_base_model: *******************]
+[2023-10-21 23:04:20,556: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-21 23:04:20,556: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:04:20,556: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:04:20,556: INFO: common: created directory at: artifacts]
+[2023-10-21 23:04:20,556: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-21 23:04:21,100: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-21 23:04:21,570: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-21 23:04:28,356: INFO: stage_03_model_training: *******************]
+[2023-10-21 23:04:28,356: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-10-21 23:04:28,356: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:04:28,356: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:04:28,356: INFO: common: created directory at: artifacts]
+[2023-10-21 23:04:28,356: INFO: common: created directory at: artifacts\training]
+[2023-10-21 23:06:22,256: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-10-21 23:06:30,898: INFO: stage_04_model_evaluation: *******************]
+[2023-10-21 23:06:30,899: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-10-21 23:06:30,901: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:06:30,903: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:06:30,903: INFO: common: created directory at: artifacts]
+[2023-10-21 23:07:06,555: INFO: common: json file saved at: scores.json]
+[2023-10-21 23:07:06,555: INFO: common: json file saved at: scores.json]
+[2023-10-21 23:07:06,555: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2023-10-21 23:08:46,627: INFO: stage_02_prepare_base_model: *******************]
+[2023-10-21 23:08:46,627: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2023-10-21 23:08:46,627: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:08:46,627: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:08:46,643: INFO: common: created directory at: artifacts]
+[2023-10-21 23:08:46,643: INFO: common: created directory at: artifacts/prepare_base_model]
+[2023-10-21 23:08:47,106: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2023-10-21 23:08:47,374: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2023-10-21 23:08:54,358: INFO: stage_03_model_training: *******************]
+[2023-10-21 23:08:54,358: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-10-21 23:08:54,358: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:08:54,358: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:08:54,358: INFO: common: created directory at: artifacts]
+[2023-10-21 23:08:54,358: INFO: common: created directory at: artifacts\training]
+[2023-10-21 23:08:58,174: ERROR: stage_03_model_training: Graph execution error:
+
+Detected at node 'AssignVariableOp_1' defined at (most recent call last):
+    File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\src\cnnClassifier\pipeline\stage_03_model_training.py", line 30, in <module>
+      obj.main()
+    File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+      training.train()
+    File "c:\kidney-disease-classification-deep-learning-project1\src\cnnClassifier\components\model_training.py", line 74, in train
+      self.model.fit(
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1685, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1284, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1268, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1249, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1054, in train_step
+      self.optimizer.minimize(loss, self.trainable_variables, tape=tape)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 543, in minimize
+      self.apply_gradients(grads_and_vars)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1174, in apply_gradients
+      return super().apply_gradients(grads_and_vars, name=name)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 650, in apply_gradients
+      iteration = self._internal_apply_gradients(grads_and_vars)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1200, in _internal_apply_gradients
+      return tf.__internal__.distribute.interim.maybe_merge_call(
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1250, in _distributed_apply_gradients_fn
+      distribution.extended.update(
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1247, in apply_grad_to_update_var
+      return self._update_step(grad, var)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 240, in _update_step
+      self.update_step(gradient, variable)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\sgd.py", line 179, in update_step
+      m.assign(-gradient * lr + m * momentum)
+Node: 'AssignVariableOp_1'
+Trying to assign to variable with tensor with wrong shape. Expected [1] got [2]
+	 [[{{node AssignVariableOp_1}}]] [Op:__inference_train_function_881]]
+Traceback (most recent call last):
+  File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\src\cnnClassifier\pipeline\stage_03_model_training.py", line 30, in <module>
+    obj.main()
+  File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "c:\kidney-disease-classification-deep-learning-project1\src\cnnClassifier\components\model_training.py", line 74, in train
+    self.model.fit(
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\eager\execute.py", line 58, in quick_execute
+    except TypeError as e:
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node 'AssignVariableOp_1' defined at (most recent call last):
+    File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\src\cnnClassifier\pipeline\stage_03_model_training.py", line 30, in <module>
+      obj.main()
+    File "C:\Kidney-Disease-Classification-Deep-Learning-Project1\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+      training.train()
+    File "c:\kidney-disease-classification-deep-learning-project1\src\cnnClassifier\components\model_training.py", line 74, in train
+      self.model.fit(
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1685, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1284, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1268, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1249, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\engine\training.py", line 1054, in train_step
+      self.optimizer.minimize(loss, self.trainable_variables, tape=tape)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 543, in minimize
+      self.apply_gradients(grads_and_vars)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1174, in apply_gradients
+      return super().apply_gradients(grads_and_vars, name=name)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 650, in apply_gradients
+      iteration = self._internal_apply_gradients(grads_and_vars)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1200, in _internal_apply_gradients
+      return tf.__internal__.distribute.interim.maybe_merge_call(
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1250, in _distributed_apply_gradients_fn
+      distribution.extended.update(
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 1247, in apply_grad_to_update_var
+      return self._update_step(grad, var)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\optimizer.py", line 240, in _update_step
+      self.update_step(gradient, variable)
+    File "C:\Users\adity\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\optimizers\sgd.py", line 179, in update_step
+      m.assign(-gradient * lr + m * momentum)
+Node: 'AssignVariableOp_1'
+Trying to assign to variable with tensor with wrong shape. Expected [1] got [2]
+	 [[{{node AssignVariableOp_1}}]] [Op:__inference_train_function_881]
+[2023-10-21 23:12:06,186: INFO: stage_03_model_training: *******************]
+[2023-10-21 23:12:06,186: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2023-10-21 23:12:06,188: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:12:06,188: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:12:06,188: INFO: common: created directory at: artifacts]
+[2023-10-21 23:12:06,188: INFO: common: created directory at: artifacts\training]
+[2023-10-21 23:15:47,158: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2023-10-21 23:15:56,068: INFO: stage_04_model_evaluation: *******************]
+[2023-10-21 23:15:56,068: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2023-10-21 23:15:56,068: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-21 23:15:56,068: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-21 23:15:56,068: INFO: common: created directory at: artifacts]
+[2023-10-21 23:16:32,196: INFO: common: json file saved at: scores.json]
+[2023-10-21 23:16:32,196: INFO: common: json file saved at: scores.json]
+[2023-10-21 23:16:32,196: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
